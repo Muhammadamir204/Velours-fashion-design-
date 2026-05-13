@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Shop Premium Couture | VELOURS FASHION DESIGN - Designer Dresses & Evening Wear</title>
+    <meta name="description" content="Shop VELOURS FASHION DESIGN's exclusive collection of luxury female couture. Premium velvet gowns, silk dresses, and evening wear.">
+    <meta name="keywords" content="buy luxury dresses, designer couture, velvet gowns online, premium evening wear, silk dresses, female fashion">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Premium Couture Collection - VELOURS FASHION DESIGN">
+    <meta property="og:description" content="Discover luxury female couture and exclusive designer collections.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1595777707802-221b8e32e0a0?w=1200&h=630&fit=crop">
+    
+    <!-- JSON-LD Schema for Products -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Premium Couture Collection",
+        "description": "Luxury female couture collection featuring velvet gowns, silk dresses, and evening wear"
+    }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">VELOURS</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="collection.html" class="nav-link active">Shop</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button id="admin-btn" class="admin-trigger" title="Admin Portal">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="1"></circle>
+                        <path d="M12 1v6m0 6v6"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><span>Shop</span></li>
+            </ul>
+        </nav>
+
+        <!-- Collection Header -->
+        <section class="collection-header">
+            <div class="container">
+                <h1>Premium Couture Collection</h1>
+                <p>Curated selection of luxury female fashion and bespoke designs</p>
+            </div>
+        </section>
+
+        <!-- Filters Section -->
+        <section class="filters-section">
+            <div class="container">
+                <div class="filters-wrapper">
+                    <h2>Filter by Category</h2>
+                    <div class="filter-tags">
+                        <button class="filter-tag active" onclick="filterProducts('all')">All</button>
+                        <button class="filter-tag" onclick="filterProducts('velvet')">Velvet</button>
+                        <button class="filter-tag" onclick="filterProducts('silk')">Silk</button>
+                        <button class="filter-tag" onclick="filterProducts('evening')">Evening Wear</button>
+                        <button class="filter-tag" onclick="filterProducts('casual')">Casual Couture</button>
+                        <button class="filter-tag" onclick="filterProducts('traditional')">Traditional Luxury</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="collection-grid-section">
+            <div class="container">
+                <div id="productsGrid" class="products-grid">
+                    <!-- Product 1 -->
+                    <article class="product-card" data-category="velvet evening">
+                        <div class="product-image-wrapper">
+                            <img 
+                                src="https://images.unsplash.com/photo-1595777707802-221b8e32e0a0?w=500&h=600&fit=crop" 
+                                alt="Midnight Velvet Gown - Premium Evening Wear"
+                                class="product-image"
+                                loading="lazy"
+                            >
+                            <span class="product-badge">New</span>
+                            <div class="product-overlay">
+                                <button class="add-to-cart-btn" onclick="openProductModal('Midnight Velvet Gown', 'PKR 85,000', 'https://images.unsplash.com/photo-1595777707802-221b8e32e0a0?w=500&h=600&fit=crop')">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3>Midnight Velvet Gown</h3>
+                            <p class="product-category">Evening Wear | Velvet</p>
+                            <p class="product-description">Luxurious midnight blue velvet gown with elegant draping and sophisticated silhouette.</p>
+                            <p class="product-price">PKR 85,000</p>
+                            <button class="view-details" onclick="openProductModal('Midnight Velvet Gown', 'PKR 85,000', 'https://images.unsplash.com/photo-1595777707802-221b8e32e0a0?w=500&h=600&fit=crop')">View Details</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article class="product-card" data-category="silk casual">
+                        <div class="product-image-wrapper">
+                            <img 
+                                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=600&fit=crop" 
+                                alt="Silk Elegance Dress - Casual Couture"
+                                class="product-image"
+                                loading="lazy"
+                            >
+                            <div class="product-overlay">
+                                <button class="add-to-cart-btn" onclick="openProductModal('Silk Elegance Dress', 'PKR 55,000', 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=600&fit=crop')">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3>Silk Elegance Dress</h3>
+                            <p class="product-category">Casual Couture | Silk</p>
+                            <p class="product-description">Soft silk dress perfect for daytime elegance. Breathable, comfortable, and timeless.</p>
+                            <p class="product-price">PKR 55,000</p>
+                            <button class="view-details" onclick="openProductModal('Silk Elegance Dress', 'PKR 55,000', 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=600&fit=crop')">View Details</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 3 -->
+                    <article class="product-card" data-category="traditional silk">
+                        <div class="product-image-wrapper">
+                            <img 
+                                src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&h=600&fit=crop" 
+                                alt="Pearl Embroidered Saree - Traditional Luxury"
+                                class="product-image"
+                                loading="lazy"
+                            >
+                            <span class="product-badge">Popular</span>
+                            <div class="product-overlay">
+                                <button class="add-to-cart-btn" onclick="openProductModal('Pearl Embroidered Saree', 'PKR 120,000', 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&h=600&fit=crop')">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3>Pearl Embroidered Saree</h3>
+                            <p class="product-category">Traditional Luxury | Silk</p>
+                            <p class="product-description">Stunning traditional saree with intricate pearl embroidery. Perfect for special occasions.</p>
+                            <p class="product-price">PKR 120,000</p>
+                            <button class="view-details" onclick="openProductModal('Pearl Embroidered Saree', 'PKR 120,000', 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&h=600&fit=crop')">View Details</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 4 -->
+                    <article class="product-card" data-category="velvet evening">
+                        <div class="product-image-wrapper">
+                            <img 
+                                src="https://images.unsplash.com/photo-1595959014901-5f1f06e1c45b?w=500&h=600&fit=crop" 
+                                alt="Emerald Velvet Dress - Premium Evening Wear"
+                                class="product-image"
+                                loading="lazy"
+                            >
+                            <span class="product-badge">New</span>
+                            <div class="product-overlay">
+                                <button class="add-to-cart-btn" onclick="openProductModal('Emerald Velvet Dress', 'PKR 75,000', 'https://images.unsplash.com/photo-1595959014901-5f1f06e1c45b?w=500&h=600&fit=crop')">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3>Emerald Velvet Dress</h3>
+                            <p class="product-category">Evening Wear | Velvet</p>
+                            <p class="product-description">Rich emerald green velvet with flowing silhouette. Statement piece for any occasion.</p>
+                            <p class="product-price">PKR 75,000</p>
+                            <button class="view-details" onclick="openProductModal('Emerald Velvet Dress', 'PKR 75,000', 'https://images.unsplash.com/photo-1595959014901-5f1f06e1c45b?w=500&h=600&fit=crop')">View Details</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 5 -->
+                    <article class="product-card" data-category="silk casual">
+                        <div class="product-image-wrapper">
+                            <img 
+                                src="https://images.unsplash.com/photo-1612336307429-8a88e8d08ee3?w=500&h=600&fit=crop" 
+                                alt="Blush Silk Blouse - Casual Couture"
+                                class="product-image"
+                                loading="lazy"
+                            >
+                            <div class="product-overlay">
+                                <button class="add-to-cart-btn" onclick="openProductModal('Blush Silk Blouse', 'PKR 38,000', 'https://images.unsplash.com/photo-1612336307429-8a88e8d08ee3?w=500&h=600&fit=crop')">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3>Blush Silk Blouse</h3>
+                            <p class="product-category">Casual Couture | Silk</p>
+                            <p class="product-description">Delicate blush-toned silk blouse. Versatile and sophisticated for everyday elegance.</p>
+                            <p class="product-price">PKR 38,000</p>
+                            <button class="view-details" onclick="openProductModal('Blush Silk Blouse', 'PKR 38,000', 'https://images.unsplash.com/photo-1612336307429-8a88e8d08ee3?w=500&h=600&fit=crop')">View Details</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 6 -->
+                    <article class="product-card" data-category="traditional velvet">
+                        <div class="product-image-wrapper">
+                            <img 
+                                src="https://images.unsplash.com/photo-1564078369132-72d1687d2a9e?w=500&h=600&fit=crop" 
+                                alt="Royal Blue Velvet Lehenga - Traditional Luxury"
+                                class="product-image"
+                                loading="lazy"
+                            >
+                            <span class="product-badge">Exclusive</span>
+                            <div class="product-overlay">
+                                <button class="add-to-cart-btn" onclick="openProductModal('Royal Blue Velvet Lehenga', 'PKR 135,000', 'https://images.unsplash.com/photo-1564078369132-72d1687d2a9e?w=500&h=600&fit=crop')">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3>Royal Blue Velvet Lehenga</h3>
+                            <p class="product-category">Traditional Luxury | Velvet</p>
+                            <p class="product-description">Exquisite royal blue velvet lehenga set with intricate detailing. Perfect for celebrations.</p>
+                            <p class="product-price">PKR 135,000</p>
+                            <button class="view-details" onclick="openProductModal('Royal Blue Velvet Lehenga', 'PKR 135,000', 'https://images.unsplash.com/photo-1564078369132-72d1687d2a9e?w=500&h=600&fit=crop')">View Details</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About VELOURS</h4>
+                <p>Premium luxury fashion specializing in high-end female couture and bespoke designs.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collection.html">Shop</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>WhatsApp: <a href="https://wa.me/923450375184" target="_blank">+92 345 0375184</a></p>
+                <p>Email: info@velourfashion.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">Instagram</a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 VELOURS FASHION DESIGN. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProductModal()">&times;</span>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Product" class="modal-image">
+                <div class="modal-info">
+                    <h2 id="modalProductName"></h2>
+                    <p id="modalPrice"></p>
+                    <div class="modal-actions">
+                        <button class="payment-btn" onclick="openPaymentModal()">Proceed to Checkout</button>
+                        <button class="cancel-btn" onclick="closeProductModal()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content payment-modal">
+            <span class="close" onclick="closePaymentModal()">&times;</span>
+            <div class="payment-body">
+                <h2>Complete Your Purchase</h2>
+                
+                <div class="payment-section">
+                    <h3>Payment Details</h3>
+                    <div class="payment-info">
+                        <p><strong>Account Title:</strong> Sanawer Irshad</p>
+                        <p><strong>Account Number:</strong> 03450375184</p>
+                        <p><strong>IBAN:</strong> PK38SADA0000003450375184</p>
+                        <p><strong>Bank:</strong> SadaPay</p>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Your Details</h3>
+                    <form id="paymentForm">
+                        <input type="text" id="fullName" placeholder="Full Name" required>
+                        <input type="email" id="email" placeholder="Email Address" required>
+                        <input type="tel" id="phone" placeholder="Phone Number" required>
+                        <textarea id="paymentReceipt" placeholder="Paste your payment receipt / transaction ID" required></textarea>
+                        
+                        <button type="button" class="confirm-payment-btn" onclick="confirmOrder()">
+                            Confirm Order & WhatsApp
+                        </button>
+                    </form>
+                </div>
+
+                <p class="security-note">🔒 Your information is secure and will only be used for order processing.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div id="adminModal" class="modal">
+        <div class="modal-content admin-modal">
+            <span class="close" onclick="closeAdminModal()">&times;</span>
+            <div class="admin-login">
+                <h2>Admin Portal</h2>
+                <form id="adminForm">
+                    <input type="email" id="adminEmail" placeholder="Admin Email" required>
+                    <input type="password" id="adminPassword" placeholder="Password" required>
+                    <button type="submit" class="admin-login-btn">Access Portal</button>
+                </form>
+                <p class="admin-note">Authorized personnel only</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
